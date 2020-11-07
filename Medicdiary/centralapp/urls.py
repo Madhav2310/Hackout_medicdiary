@@ -5,7 +5,6 @@ app_name = 'centralapp'
 urlpatterns = [
 
     path('',views.mainpage,name='mainpage'),
-    path('About_us/',views.About_us,name ='About_us'),
     path('FAQS/',views.FAQS,name ='FAQS'),
     path('medical_practitioners/How_to_use',views.doc_how_to_use,name ='doc_how_to_use'),
     path('friends-and-family/How_to_use',views.patients_how_to_use,name ='patients_how_to_use'),
