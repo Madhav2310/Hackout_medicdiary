@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'crispy_forms',
     'centralapp.apps.CentralappConfig',
     'doctor.apps.DoctorConfig',
     'patient.apps.PatientConfig',
