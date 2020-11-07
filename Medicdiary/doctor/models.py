@@ -22,8 +22,56 @@ class DoctorProfile(models.Model):
     Current_place_of_work = models.CharField(max_length=30)
     Aadhar_Number= models.IntegerField(blank=False, help_text='12 digit unique Aadhar Number')
     usertype = models.IntegerField(default = 2)
-    # mypatients = models.ManyToManyField(PatientProfile,through = "pats", related_name = "mypat")
-    # mypatient = models.ManyToManyField(PatientProfile, related_name = "mypat")
 
     def __str__(self):
         return self.name
+
+# class Mypatients(models.Model):
+#
+#     doctorp = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete= models.CASCADE)
+#     # mypatientlist = models.ManyToManyField(PatientProfile)
+#     # patient.objecs.getall()
+#
+#
+class PatientDocConfig(models.Model):
+    doctor_id=models.IntegerField(blank=False)
+    
+    access_code=models.IntegerField(blank=False)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# =============================================================================================
+# =============================================================================================
+# Create your models here.
+# class doc_details(models.Model):
+#     usertype=models.CharField(max_length=100,default="doctor")
+#     fname=models.CharField(max_length=100)
+#     lname=models.CharField(max_length=100)
+#
+#     username=models.CharField(max_length=100)
+#     email=models.CharField(max_length=100)
+#
+#
+# class patient_doc_config(models.Model):
+#     patient_username=models.CharField(max_length=100)
+#     doctor_username=models.CharField(max_length=100)
+#     auth_key=models.CharField(max_length=100)
+#
+# class records(models.Model):
+#     doctor_username=models.CharField(max_length=100,default="sdk")
+#     patient_username=models.CharField(max_length=100,default="skdjks")
+#     diagnosis=models.CharField(max_length=100)
+#     doctor_notes=models.TextField(max_length=1000)
+#     medications=models.TextField(max_length=1000)
