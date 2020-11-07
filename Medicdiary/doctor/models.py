@@ -36,7 +36,7 @@ class DoctorProfile(models.Model):
 class PatientDocConfig(models.Model):
     doctor_id=models.IntegerField(blank=False)
     
-    access_code=models.IntegerField(blank=False)
+    access_code=models.IntegerField(default=1,blank=False)
 
 
 
