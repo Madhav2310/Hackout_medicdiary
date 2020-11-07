@@ -35,8 +35,6 @@ def login(request):
 
 # uniquetogether
 
-def About_us(request):
-    return render(request,'centralapp/about_us.html')
 def FAQS(request):
     return render(request,'centralapp/faqs.html')
 def doc_how_to_use(request):
